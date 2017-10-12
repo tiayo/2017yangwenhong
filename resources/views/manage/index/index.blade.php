@@ -13,105 +13,20 @@
 @endsection
 
 @section('body')
-    <div class="row">
-        <div class="col-sm-12">
-            <section class="panel">
-                <header class="panel-heading">
-                    最新订单
-                    <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
-                         </span>
-                </header>
-                <div class="panel-body">
-                    <section id="unseen">
-                        <table class="table table-bordered table-striped table-condensed">
-                            <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>用户</th>
-                                <th>商品</th>
-                                <th>地址</th>
-                                <th>电话</th>
-                                <th>价格</th>
-                                <th>寄送方式</th>
-                                <th>运送编号</th>
-                                <th>订单状态</th>
-                                <th>更新时间</th>
-                                <th>创建时间</th>
-                            </tr>
-                            </thead>
-
-                            <tbody id="target">
-                            @foreach($orders as $list)
-                                <tr>
-                                    <td>{{ $list['id'] }}</td>
-                                    <td>{{ $list->user->name }}</td>
-                                    <td>
-                                        @foreach($list->orderDetail as $list_detail)
-                                            {{ $list_detail->commodity->name }} <br>
-                                        @endforeach
-                                    </td>
-                                    <td>{{ $list['address'] }}</td>
-                                    <td>{{ $list['phone'] }}</td>
-                                    <td>￥{{ $list['price'] }}</td>
-                                    <td>{{ config('site.order_type')[$list['type']] }}</td>
-                                    <td>{{ $list['tracking'] }}</td>
-                                    <td style="color: red">
-                                        {{ config('site.order_status')[$list['status']] }}
-                                    </td>
-                                    <td>{{ $list['updated_at'] }}</td>
-                                    <td>{{ $list['created_at'] }}</td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
-                    </section>
-                </div>
-            </section>
-            <section class="panel">
-                <header class="panel-heading">
-                    最新会员
-                    <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
-                         </span>
-                </header>
-                <div class="panel-body">
-                    <section id="unseen">
-                        <table class="table table-bordered table-striped table-condensed">
-                            <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>姓名</th>
-                                <th>email</th>
-                                <th>注册时间</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($lists as $list)
-                                    <tr>
-                                        <td>{{ $list['id'] }}</td>
-                                        <td>{{ $list['name'] }}</td>
-                                        <td>{{ $list['email'] }}</td>
-                                        <td>{{ $list['created_at'] }}</td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </section>
-                </div>
-            </section>
-        </div>
+    <div class="col-md-12 text-center">
+        <p><img style="width:400px;margin-top: 3em" src="{{ asset('style/media/image/logo.png') }}" alt=""></p>
+        <h4>欢迎您: {{ Auth::user()->name }}
+            登录
+            @if(can('admin'))
+                管理员后台
+            @elseif(can('business'))
+                商户后台
+            @endif</h4>
+        <h4>服务器时间: {{ date('Y-m-d H:i:s') }}</h4>
+        <h4>登录ip:{{ Request::getClientIp() }}</h4>
     </div>
 @endsection
 
 @section('script')
     @parent
-    <!--Calendar-->
-    <script src="{{ asset('/static/adminex/js/calendar/clndr.js') }}"></script>
-    <script src="{{ asset('/static/adminex/js/calendar/evnt.calendar.init.js') }}"></script>
-    <script src="{{ asset('/static/adminex/js/calendar/moment-2.2.1.js') }}"></script>
-    <script src="{{ asset('http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js') }}"></script>
-
 @endsection
