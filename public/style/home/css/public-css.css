@@ -1,0 +1,183 @@
+body {
+    padding-top: 80px;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: #000;
+    z-index: 9999999999999999;
+}
+header .head-left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 2.5%;
+    margin: auto 0;
+    height: 35px;
+}
+header .head-left a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #ccc;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+header .head-con {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 900px;
+    height: 100%;
+}
+header .head-con .nav-top {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+}
+header .head-con .nav-top li {
+    float: left;
+    height: 100%;
+    margin-bottom: 10px;
+    line-height: 16px;
+}
+header .head-con .nav-top li:hover {
+    background-color: #fff;
+}
+header .head-con .nav-top li span {
+    float: left;
+    height: 25px;
+    margin-top: 5px;
+    padding: 0 25px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
+header .head-con .nav-top li:nth-last-child(1) span {
+    border-right: 0;
+}
+header .head-con .nav-top li:hover span {
+    color: #000;
+}
+header .head-con .search {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 150px;
+    height: 35px;
+    background-color: #fff;
+}
+header .head-con .search .searchBtn {
+    float: left;
+    width: 35px;
+    height: 100%;
+    background: #fff url(../icon/search.png) no-repeat center;
+    background-size: 30px;
+    cursor: pointer;
+}
+header .head-con .search input {
+    float: left;
+    width: 115px;
+    height: 100%;
+}
+header .head-con .login {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    padding-left: 20px;
+    background: url(../icon/user.png) no-repeat left center;
+    background-size: 16px 16px;
+    color: #fff;
+}
+header .head-con .shopping-cart {
+    position: absolute;
+    bottom: 10px;
+    right: 160px;
+    width: 35px;
+    height: 35px;
+    background: url(../icon/shopping-cart.png) no-repeat center;
+    background-size: 25px 25px;
+}
+header .head-con .shopping-cart em {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #df1b19;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 15px;
+}
+header .nav-menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    padding: 24px 10px 40px 40px;
+    background-color: #fff;
+    z-index: 999;
+}
+header .nav-menu li {
+    float: left;
+    min-width: 200px;
+}
+header .nav-menu li h1 {
+    font-size: 22px;
+    margin-bottom: 17px;
+    line-height: 26px;
+}
+header .nav-menu li a {
+    display: block;
+    margin-bottom: 10px;
+    line-height: 16px;
+}
+header .nav-menu li a:hover {
+    color: #C53622;
+}
+footer {
+    float: left;
+    width: 100%;
+    margin-top: 150px;
+    background-color: #000;
+}
+footer .footer-con {
+    width: 1000px;
+    margin: 0 auto;
+}
+footer .footer-con .nav-bottom {
+    width: 100%;
+    padding: 30px 0 10px;
+    border-bottom: 1px solid #999;
+}
+footer .footer-con .nav-bottom li {
+    float: left;
+    min-width: 200px;
+}
+footer .footer-con .nav-bottom li a {
+    display: block;
+    margin-bottom: 10px;
+    line-height: 16px;
+    color: #999;
+}
+footer .footer-con .copyright {
+    height: 45px;
+    color: #999;
+    text-align: center;
+    line-height: 45px;
+}
