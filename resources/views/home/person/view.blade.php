@@ -8,8 +8,6 @@
     <div class="info">
         <img src="{{ Auth::user()['avatar'] }}" class="portrait" />
         <span class="name">{{ Auth::user()['name'] }}</span>
-        <span class="id">ID:<em>{{ Auth::user()['id'] }}</em></span>
-        <span class="member-type">注册会员</span>
         <a href="{{ route('home.person_update') }}" class="more"></a>
     </div>
     <div class="title">我的订单</div>

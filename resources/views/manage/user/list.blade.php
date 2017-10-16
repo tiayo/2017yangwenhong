@@ -36,6 +36,7 @@
 		                    <th>电话</th>
                             <th>地址</th>
                             <th>类型</th>
+                            <th>分组</th>
                             <th>注册时间</th>
 							<th>操作</th>
 		                </tr>
@@ -50,6 +51,7 @@
                             <td>{{ $list['phone'] }}</td>
                             <td>{{ $list['address'] }}</td>
                             <td>{{ config('site.user_type')[$list['type']] }}</td>
+                            <td>{{ config('site.user_group')[$list['group']] }}</td>
                             <td>{{ $list['created_at'] }}</td>
                             <td>
                                 <button class="btn btn-info" type="button" onclick="location='{{ route('user_update', ['id' => $list['id'] ]) }}'">编辑</button>

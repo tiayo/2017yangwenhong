@@ -14,4 +14,9 @@ class Category extends Model
     {
         return $this->belongsTo('App\User', 'parent_id', 'id');
     }
+
+    public function commodity()
+    {
+        return $this->hasMany('App\Commodity');
+    }
 }

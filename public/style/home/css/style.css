@@ -17,7 +17,7 @@ body {
     width: 100%;
 }
 /*底部导航栏*/
-.nav {
+/*.nav {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -64,7 +64,7 @@ body {
 .nav a:nth-child(4) {
     background: url(../icon/grzx.png) no-repeat center 5px;
     background-size: 25px;
-}
+}*/
 /*回到顶部*/
 .return-top {
     position: fixed;
@@ -137,34 +137,34 @@ body {
     animation: load 1s infinite linear;
 }
 @-moz-keyframes load {
-    0% {
+    0% { 
         -webkit-transform: rotate(0deg);
     }
-    100% {
+    100% {  
         -webkit-transform: rotate(360deg);
     }
 }
 @-ms-keyframes load {
-    0% {
+    0% { 
         -webkit-transform: rotate(0deg);
     }
-    100% {
+    100% {  
         -webkit-transform: rotate(360deg);
     }
 }
 @-o-keyframes load {
-    0% {
+    0% { 
         -webkit-transform: rotate(0deg);
     }
-    100% {
+    100% {  
         -webkit-transform: rotate(360deg);
     }
 }
 @keyframes load {
-    0% {
+    0% { 
         -webkit-transform: rotate(0deg);
     }
-    100% {
+    100% {  
         -webkit-transform: rotate(360deg);
     }
 }
@@ -227,9 +227,9 @@ body {
 
 
 /*商城主页*/
-.index {
+/*.index {
     margin-bottom: 55px;
-}
+}*/
 .index .search {
     position: fixed;
     top: 0;
@@ -239,7 +239,7 @@ body {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
     z-index: 999;
 }
-.index .search .fenlei {
+/*.index .search .fenlei {
     float: left;
     width: 15%;
     height: 45px;
@@ -261,8 +261,8 @@ body {
     font-size: 12px;
     text-align: center;
     line-height: 68px;
-}
-.index .search .shopping-cartt em {
+}*/
+/*.index .search .shopping-cartt em {
     position: absolute;
     top: 1px;
     right: 12%;
@@ -274,11 +274,12 @@ body {
     font-size: 12px;
     text-align: center;
     line-height: 17px;
-}
+}*/
 .index .search-input {
     float: left;
-    width: 70%;
+    width: 90%;
     height: 100%;
+    margin: 0 5%;
 }
 .index .search input {
     width: 100%;
@@ -295,7 +296,6 @@ body {
 }
 .index .index-bigpic {
     width: 100%;
-    margin-top: 45px;
 }
 .index .index-bigpic img {
     float: left;
@@ -305,6 +305,7 @@ body {
     width: 100%;
     background-color: #fff;
     border-bottom: 1px solid #e7e7e7;
+    margin-top: 45px;
 }
 .index .nav-top a {
     float: left;
@@ -1002,18 +1003,19 @@ body {
 .pc .info {
     position: relative;
     width: 100%;
-    height: 115px;
+    height: 150px;
     margin-bottom: 10px;
-    background: url(../picture/grzx_pic_bg.png) no-repeat center;
-    background-size: 100%;
+    background: #999;
     color: #fff;
 }
 .pc .portrait {
     position: absolute;
-    top: 25%;
-    left: 3%;
-    width: 60px;
-    height: 60px;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
 }
 .pc .name {
@@ -1022,13 +1024,16 @@ body {
     -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
     position: absolute;
-    top: 28%;
-    left: 23%;
+    top: 115px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 30%;
     color: #333;
     font-weight: bold;
+    text-align: center;
 }
-.pc .id {
+/*.pc .id {
     overflow: hidden;
     white-space: nowrap;
     -ms-text-overflow: ellipsis;
@@ -1061,7 +1066,7 @@ body {
     height: 30px;
     background: url(../icon/message.png) no-repeat center;
     background-size: 20px;
-}
+}*/
 .pc .more {
     position: absolute;
     top: 25%;
@@ -1098,8 +1103,8 @@ body {
 .pc .content {
     position: fixed;
     overflow: scroll;
-    top: 218px;
-    bottom: 50px;
+    top: 251px;
+    bottom: 0px;
     width: 100%;
     margin-top: 10px;
     background-color: #f5f5f5;
@@ -1122,16 +1127,16 @@ body {
     font-weight: bold;
     line-height: 35px;
 }
-.pc .content .con ul li .status a {
+/*.pc .content .con ul li .status a {
     float: right;
     height: 100%;
     padding-left: 25px;
     background: url(../icon/icon_wuliu.png) no-repeat 2px center;
     background-size: 20px;
     font-weight: normal;
-}
+}*/
 .pc .content .con ul li .info {
-    position: relative;
+    /*position: relative;*/
     float: left;
     width: 96%;
     height: auto;
@@ -1140,7 +1145,7 @@ body {
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
 }
-.pc .content .con ul li .info .pic {
+/*.pc .content .con ul li .info .pic {
     float: left;
     width: 65px;
     height: 65px;
@@ -1150,21 +1155,50 @@ body {
     float: left;
     width: 100%;
     height: 100%;
-}
-.pc .content .con ul li .info .name {
-    position: absolute;
+}*/
+.pc .content .con ul li .info .store-name {
+    /*position: absolute;*/
     overflow: hidden;
-    top: 8px;
-    left: 85px;
-    width: 74%;
-    height: 40px;
+    /*top: 8px;
+    left: 85px;*/
+    width: 100%;
+    height: 20px;
+    padding-bottom: 5px;
     color: #333;
     font-size: 16px;
     font-weight: bold;
     text-align: left;
     line-height: 20px;
+    border-bottom: 1px solid #999;
 }
-.pc .content .con ul li .info .pay-for {
+.pc .content .con ul li .info ul {
+    padding: 5px 0;
+}
+.pc .content .con ul li .info ul li {
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+.pc .content .con ul li .info ul li span {
+    float: left;
+    height: 100%;
+    color: #000;
+    margin-left: 20px;
+}
+.pc .content .con ul li .info ul li em {
+    float: right;
+    height: 100%;
+    color: #999;
+    margin-right: 20px;
+}
+.pc .content .con ul li .info ul li strong {
+    float: right;
+    height: 100%;
+    color: #999;
+    margin-right: 20px;
+}
+/*.pc .content .con ul li .info .pay-for {
     position: absolute;
     top: 50px;
     left: 85px;
@@ -1178,7 +1212,7 @@ body {
     font-weight: bold;
     text-align: left;
     line-height: 25px;
-}
+}*/
 .pc .content .con ul li h4 {
     float: left;
     width: 98%;
@@ -1511,7 +1545,7 @@ body {
 .classification-list .content .content-list {
     position: relative;
     width: 100%;
-    height: 100px;
+    height: 70px;
     background-color: #fff;
     border-bottom: 1px solid #e7e7e7;
 }
@@ -1524,8 +1558,8 @@ body {
     position: absolute;
     top: 6px;
     left: 2%;
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
 }
 .classification-list .content .content-list a .pic img {
     float: left;
@@ -1537,54 +1571,40 @@ body {
     text-overflow: ellipsis;
     position: absolute;
     top: 6px;
-    left: 26%;
+    left: 19%;
     width: 70%;
-    height: 40px;
+    height: 30px;
     padding: 0 2%;
-    font-size: 14px;
-    line-height: 20px;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
 }
 .classification-list .content .content-list a .price {
     position: absolute;
-    top: 50px;
-    left: 28%;
+    top: 36px;
+    left: 21%;
     width: 68%;
-    height: 30px;
+    height: 15px;
     padding-top: 5px;
-    background: #fff url(../icon/icon_gouwuche2.png) no-repeat 95% 7px;
-    background-size: 25px;
-    font-size: 20px;
-    line-height: 30px;
+    color: #999;
+    font-size: 14px;
+    line-height: 15px;
 }
 .classification-list .content .content-list a .price span {
     float: left;
-    width: 45%;
-    height: 30px;
-    color: red;
+    height: 100%;
+    padding: 0 5px;
+    border-right: 1px solid #999;
     font-size: 12px;
     text-align: left;
 }
-.classification-list .content .content-list a .price span em {
-    font-size: 16px;
-}
-.classification-list .content .content-list a .price b {
+.classification-list .content .content-list a .price em {
     float: left;
-    height: 30px;
-    padding-left: 25px;
-    color: red;
-    background: url(../icon/icon_jifen.png) no-repeat 2px 5px;
-    background-size: 20px;
-    font-weight: normal;
-    text-align: right;
-    line-height: 31px;
-}
-.classification-list .content .content-list a .price s {
-    float: left;
-    width: 9%;
-    height: 30px;
-    color: red;
-    background: url(../icon/++.png) no-repeat center 6px;
-    background-size: 20px;
+    height: 100%;
+    padding-left: 5px;
+    font-size: 12px;
+    text-align: left;
 }
 .classification-list h4 {
     width: 100%;
@@ -1770,7 +1790,7 @@ body {
     font-size: 12px;
     text-align: center;
     line-height: 17px;
-}
+}  
 .goods-details .nav-bottom .join-cart {
     float: left;
     width: 30%;
@@ -2874,11 +2894,9 @@ body {
     position: relative;
     float: left;
     width: 100%;
-    height: 80px;
+    padding-bottom: 15px;
     margin-bottom: 10px;
-    background: #fff url(../icon/address_bottom.png) no-repeat bottom;
-    background-size: 100%;
-    border-bottom: 1px solid #e7e7e7;
+    background: #ffda44;
 }
 .goods-settlement .address h1 {
     float: left;
@@ -2890,48 +2908,46 @@ body {
     padding-left: 10%;
     margin-top: 10px;
     font-size: 16px;
-    font-weight: bold;
     text-align: left;
     line-height: 25px;
 }
-.goods-settlement .address h1 span,
-.goods-settlement .address h1 em {
-    display: inline-block;
-    height: 25px;
-    padding: 0 2%;
-    text-align: center;
-    line-height: 25px;
-}
-.goods-settlement .address h2 {
+.goods-settlement .address h1 .name-input {
     float: left;
-    overflow: hidden;
-    white-space: nowrap;
-    -ms-text-overflow: ellipsis;
-    text-overflow: ellipsis;
+    width: 100%;
+    height: 25px;
+    background-color: #ffda44;
+    line-height: 25px;
+    outline: none;
+    border: 0;
+}
+.goods-settlement .address h1 .tel-input {
+    float: left;
+    width: 100%;
+    height: 25px;
+    background-color: #ffda44;
+    line-height: 25px;
+    outline: none;
+    border: 0;
+}
+.goods-settlement .address .address-input {
+    float: left;
     width: 80%;
     padding-left: 10%;
+    margin-left: 20px;
     background: url(../icon/address2.png) no-repeat 4% 50%;
     background-size: 20px;
     color: #666;
+    outline: none;
+    border: 0;
     font-size: 14px;
     text-align: left;
     line-height: 25px;
-}
-.goods-settlement .address h3 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 10%;
-    height: 94%;
-    background: url(../icon/icon_arrow_right.png) no-repeat center;
-    background-size: 15px;
 }
 .goods-settlement .content {
     float: left;
     width: 100%;
 }
 .goods-settlement .content .info {
-    position: relative;
     float: left;
     width: 96%;
     padding: 2%;
@@ -2939,77 +2955,39 @@ body {
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
 }
-.goods-settlement .content .info .pic {
-    float: left;
-    width: 85px;
-    height: 85px;
-}
-.goods-settlement .content .info .pic img {
-    float: left;
-    width: 100%;
-    height: 100%;
-}
 .goods-settlement .content .info .name {
-    position: absolute;
     overflow: hidden;
-    top: 5px;
-    left: 27%;
-    width: 56%;
-    height: 50px;
+    width: 100%;
+    height: 30px;
     color: #333;
+    box-shadow: 0px 1px #999;
     font-size: 16px;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     line-height: 25px;
 }
-.goods-settlement .content .info .num-of {
-    position: absolute;
-    top: 45px;
-    right: 1%;
-    width: 10%;
-    color: #333;
-    font-weight: bold;
-    font-size: 14px;
-    text-align: left;
+.goods-settlement .content .info ul {
+    margin-top: 10px;
 }
-.goods-settlement .content .info .num-of span {
-    margin-left: 7%;
-}
-.goods-settlement .content .info .pay-for {
-    position: absolute;
-    top: 70px;
-    left: 26%;
-    width: 50%;
+.goods-settlement .content .info ul li {
+    padding: 0 10px;
     height: 25px;
-    padding-left: 7%;
-    background: url(../icon/icon_jifen.png) no-repeat 2% 5px;
-    background-size: 15px;
-    color: #df1b19;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
     line-height: 25px;
 }
-.goods-settlement .content .info .type {
-    position: absolute;
-    overflow: hidden;
-    top: 55px;
-    left: 27%;
-    width: 57%;
-    height: 16px;
-}
-.goods-settlement .content .info .type h1 {
+.goods-settlement .content .info ul li span {
     float: left;
-    overflow: hidden;
-    margin-right: 10px;
-    background: none;
-    color: #666;
-    font-size: 12px;
+    height: 100%;
 }
-/*.goods-settlement .content .goods-num,*/
-.goods-settlement .content .courier
-    /*.goods-settlement .content .balance*/
-{
+.goods-settlement .content .info ul li strong {
+    float: right;
+    height: 100%;
+    margin-right: 15px;
+}
+.goods-settlement .content .info ul li em {
+    float: right;
+    height: 100%;
+}
+.goods-settlement .content .courier {
     float: left;
     width: 94%;
     height: 45px;
@@ -3019,54 +2997,10 @@ body {
     color: #999;
     line-height: 45px;
 }
-/*.goods-settlement .content .goods-num form {
-    float: right;
-    width: 80px;
-    height: 100%;
-}
-.goods-settlement .content .goods-num div {
-    float: right;
-    width: 100%;
-    height: 30px;
-    margin-top: 8%;
-}
-.goods-settlement .content .goods-num span {
-    float: left;
-    width: 27px;
-    height: 27px;
-    font-size: 16px;
-    text-align: center;
-    line-height: 27px;
-}
-.goods-settlement .content .goods-num .jian {
-    background: url(../icon/-.png) 44% 5px no-repeat;
-    background-size: 20px;
-}
-.goods-settlement .content .goods-num .jia {
-    float: right;
-    background: url(../icon/+.png) 65% 5px no-repeat;
-    background-size: 20px;
-}
-.goods-settlement .content .goods-num input {
-    float: left;
-    width: 25px;
-    height: 25px;
-    margin-top: 3px;
-    outline: none;
-    border: none;
-    background-color: #fff;
-    text-align: center;
-    line-height: 25px;
-}*/
 .goods-settlement .content .courier em {
     float: right;
     color: #333;
 }
-/*.goods-settlement .content .balance em {
-    float: right;
-    color: #df1b19;
-    font-weight: bold;
-}*/
 .goods-settlement .nav-bottom {
     position: fixed;
     bottom: 0;
@@ -3097,7 +3031,7 @@ body {
     font-weight: bold;
     text-align: right;
 }
-.goods-settlement .nav-bottom a {
+.goods-settlement .nav-bottom button {
     float: right;
     width: 30%;
     height: 45px;
@@ -3107,103 +3041,9 @@ body {
     font-weight: bold;
     text-align: center;
     line-height: 45px;
+    outline: none;
+    border: 0;
 }
-/*.goods-settlement .mask {
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-}
-.goods-settlement .mask .payment {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 243px;
-    background-color: #fff;
-}
-.goods-settlement .mask .payment .payment-details {
-    width: 85%;
-    height: 50px;
-    padding-left: 15%;
-    border-bottom: 1px solid #d7d7d7;
-    color: #333;
-    font-size: 20px;
-    text-align: center;
-    line-height: 50px;
-}
-.goods-settlement .mask .payment .payment-details em {
-    float: right;
-    width: 15%;
-    height: 100%;
-    background: url(../icon/close.png) no-repeat center;
-    background-size: 70%;
-}
-.goods-settlement .mask .payment .payment-way,
-.goods-settlement .mask .payment .payment-amount {
-    width: 90%;
-    height: 45px;
-    padding: 0 5%;
-    border-bottom: 1px solid #d7d7d7;
-    color: #333;
-    font-size: 16px;
-    line-height: 45px;
-}
-.goods-settlement .mask .payment .payment-way span {
-    float: right;
-    height: 100%;
-}
-.goods-settlement .mask .payment .payment-amount span {
-    float: right;
-    height: 100%;
-    padding-left: 30px;
-    background: url(../icon/icon_jifen.png) no-repeat 5px center;
-    background-size: 20px;
-    color: #df1b19;
-    font-size: 18px;
-    font-weight: bold;
-}
-.goods-settlement .mask .payment li:nth-last-child(1) {
-    width: 100%;
-    height: 74px;
-    padding-top: 7%;
-}
-.goods-settlement .mask .payment li:nth-last-child(1) a {
-    display: block;
-    width: 50%;
-    height: 45px;
-    margin: 0 auto;
-    background-color: #ffda44;
-    border-radius: 20px;
-    box-shadow: 0px 3px rgba(92, 59, 9, 0.2);
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 45px;
-}*/
-/*@media (max-width:320px) {
-    .goods-settlement .info .name {
-        width: 50%;
-        left: 30%;
-    }
-    .goods-settlement .info .num-of {
-        right: 3%;
-    }
-    .goods-settlement .info .pay-for {
-        width: 45%;
-        left: 29%;
-    }
-    .goods-settlement .info .type {
-        overflow: hidden;
-        width: 50%;
-        left: 30%;
-    }
-}*/
 
 /*支付成功*/
 .payfor-success {
@@ -3590,34 +3430,34 @@ body {
     animation: load 1s infinite linear;
 }
 @-moz-keyframes load {
-    0% {
+    0% { 
         -webkit-transform: rotate(0deg);
     }
-    100% {
+    100% {  
         -webkit-transform: rotate(360deg);
     }
 }
 @-ms-keyframes load {
-    0% {
+    0% { 
         -webkit-transform: rotate(0deg);
     }
-    100% {
+    100% {  
         -webkit-transform: rotate(360deg);
     }
 }
 @-o-keyframes load {
-    0% {
+    0% { 
         -webkit-transform: rotate(0deg);
     }
-    100% {
+    100% {  
         -webkit-transform: rotate(360deg);
     }
 }
 @keyframes load {
-    0% {
+    0% { 
         -webkit-transform: rotate(0deg);
     }
-    100% {
+    100% {  
         -webkit-transform: rotate(360deg);
     }
 }
@@ -4570,3 +4410,169 @@ body {
     padding-top: 20px;
     border-top: 1px solid #e7e7e7;
 }*/
+
+/*店铺页面*/
+.store .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    background: #ffda44;
+    z-index: 999;
+}
+.store .header .store-logo {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    width: 88px;
+    height: 88px;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #000,
+                -1px -1px 5px #000;
+}
+.store .header .store-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 35px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 35px;
+}
+.store .tab {
+    position: absolute;
+    overflow: scroll;
+    top: 150px;
+    left: 0;
+    bottom: 45px;
+    width: 25%;
+    background: #f4f4f4;
+    box-shadow: 0px -1px 5px #999;
+}
+.store .tab li {
+    overflow: hidden;
+    height: 40px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+}
+.store .tab .on {
+    background-color: #fff;
+    border-left: 3px solid #ffda44;
+}
+.store .tabcon {
+    position: absolute;
+    overflow: scroll;
+    top: 150px;
+    left: 25%;
+    right: 0;
+    bottom: 45px;
+    width: 75%;
+    background-color: #fff;
+    box-shadow: 0px -1px 5px #999;
+}
+.store .tabcon li {
+    display: none;
+    width: 96%;
+    padding: 5px 2% 10px;
+}
+.store .tabcon .on2 {
+    display: block;
+}
+.store .tabcon li .tabcon-list {
+    position: relative;
+    float: left;
+    width: 96%;
+    padding: 5px 2%;
+    height: 50px;
+    box-shadow: 1px 1px 5px #cbcbcc;
+}
+.store .tabcon li .tabcon-list .food-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+    margin: auto 0;
+    width: 50px;
+    height: 50px;
+}
+.store .tabcon li .tabcon-list .food-name {
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    height: 25px;
+    font-weight: bold;
+    line-height: 25px;
+}
+.store .tabcon li .tabcon-list .food-price {
+    position: absolute;
+    bottom: 5px;
+    left: 60px;
+    height: 20px;
+    color: #f00;
+    line-height: 20px;
+}
+.store .tabcon li .tabcon-list .food-num-choose {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 75px;
+    height: 20px;
+}
+.store .tabcon li .tabcon-list .food-num-choose .reduce-num {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../icon/reduce-num.png) no-repeat center;
+    background-size: 20px 20px;
+}
+.store .tabcon li .tabcon-list .food-num-choose .food-num {
+    float: left;
+    width: 35px;
+    height: 20px;
+    border: 0;
+    outline: none;
+    text-align: center;
+    line-height: 20px;
+}
+.store .tabcon li .tabcon-list .food-num-choose .add-num {
+    float: right;
+    width: 20px;
+    height: 20px;
+    background: url(../icon/add-num.png) no-repeat center;
+    background-size: 20px 20px;
+}
+.store .total {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.store .total .total-price {
+    float: left;
+    width: 180px;
+    height: 100%;
+    padding-left: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 45px;
+}
+.store .total .clearing {
+    float: right;
+    width: 100px;
+    height: 100%;
+    color: #fff;
+    border: 0;
+    background-color: #ffda44;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    line-height: 45px;
+}

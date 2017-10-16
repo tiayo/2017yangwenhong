@@ -44,7 +44,7 @@ $(document).ready(function(){
             this.bool = true;
         }
     });
-
+    
     // 商品分类页面
     // tab切换
     $(".classification .tab li").click(function() {
@@ -68,7 +68,7 @@ $(document).ready(function(){
     // 内容清浮动
     $(".classification .tabcon li").addClass('clearfix');
     $(".classification .tabcon li a").addClass('clearfix');
-
+    
 
     // 购物车页面
     var gwcSp = $(".shopping-cart .content .list").length;
@@ -133,7 +133,7 @@ $(document).ready(function(){
         init: function(){
             this.sel();
             this.add();
-            this.del();
+            this.del(); 
         },
         sel: function(){
             $(".choose em").on("click", function(){
@@ -154,17 +154,17 @@ $(document).ready(function(){
                 var _this = $(this);
                 if(_this.hasClass('sel-red')){
                     _this.removeClass('sel-red'),
-                        $(".choose em").removeClass('sel-red1');
+                    $(".choose em").removeClass('sel-red1');
                     $(".shopping-cart .settlement em").html(0);
                 } else {
                     _this.addClass('sel-red'),
-                        $(".choose em").addClass('sel-red1');
+                    $(".choose em").addClass('sel-red1');
                     var len3 = $(".sel-red1").length;
                     $(".shopping-cart .settlement em").html(len3);
                 };
                 shop.show();
             });
-
+            
             $(".shopping-cart .list .delete").on("click", function() {
                 $(this).siblings('.choose').children().removeClass('sel-red');
                 shop.show();
@@ -369,29 +369,29 @@ $(document).ready(function(){
         $(this).children('em').addClass('default').parent().parent().parent().siblings().children('h3').children('span').children('strong').html("设为默认");
         $(this).children('strong').html("默认地址");
     });
-
+    
     // 添加新地址
-    $(".add-address .address-info li:nth-last-child(1) h1 span").on("click", function() {
-        if(this.bool == true || this.bool == undefined) {
-            $(".add-address .address-info li:nth-last-child(1) h1 span em").css({
-                "float":"right",
-                "background":"#fff"
-            });
-            $(".add-address .address-info li:nth-last-child(1) h1 span").css({
-                "background":"#ffda44"
-            });
-            this.bool = false;
-        } else {
-            $(".add-address .address-info li:nth-last-child(1) h1 span em").css({
-                "float":"left",
-                "background":"#fff"
-            });
-            $(".add-address .address-info li:nth-last-child(1) h1 span").css({
-                "background":"#fff"
-            });
-            this.bool = true;
-        }
-    });
+    // $(".add-address .address-info li:nth-last-child(1) h1 span").on("click", function() {
+    //     if(this.bool == true || this.bool == undefined) {
+    //         $(".add-address .address-info li:nth-last-child(1) h1 span em").css({
+    //             "float":"right",
+    //             "background":"#fff"
+    //         });
+    //         $(".add-address .address-info li:nth-last-child(1) h1 span").css({
+    //             "background":"#ffda44"
+    //         });
+    //         this.bool = false;
+    //     } else {
+    //         $(".add-address .address-info li:nth-last-child(1) h1 span em").css({
+    //             "float":"left",
+    //             "background":"#fff"
+    //         });
+    //         $(".add-address .address-info li:nth-last-child(1) h1 span").css({
+    //             "background":"#fff"
+    //         });
+    //         this.bool = true;
+    //     }
+    // });
     //手机号码正则
     $("#psCustomerTel").blur(function() {
         var regs = /^0?1[3|4|5|7|8|9][0-9]\d{8}$/;
@@ -404,7 +404,10 @@ $(document).ready(function(){
     });
     $(".save").click(function() {
         if($("#customerName").val() != "" && $("#psCustomerTel").val() != "" && $("#detailed-address").val() != "" ) {
-           $('#address_form').submit();
+            $(".save").attr("href", "address-choose.html");
+            $("#customerName").val("");
+            $("#psCustomerTel").val("");
+            $("#detailed-address").val("");
         } else {
             $(".mask-false").fadeIn(1000, function() {
                 $(".mask-false").fadeOut(1000);
@@ -413,27 +416,27 @@ $(document).ready(function(){
     });
 
     // 立即提现
-    $(".change-withdrawal h4 span").click(function() {
-        var money = $(".change-withdrawal h4 em").text();
-        $("#money").val(money);
-    });
-    $(".change-withdrawal h5").on("click", function() {
-        var val = $("#money").val();
-        var reg = /^\d+(?:\.\d{2})?$/;
-        if(val == "" || !reg.test(val) || val == 0) {
-            $(".change-withdrawal .mask1").fadeIn(1000, function() {
-                $(".change-withdrawal .mask1").fadeOut(1000);
-            });
-        } else if(parseFloat(val) > parseFloat($(".change-withdrawal h4 em").text())) {
-            $(".change-withdrawal .mask2").fadeIn(1000, function() {
-                $(".change-withdrawal .mask2").fadeOut(1000);
-            });
-            console.log(parseFloat(val));
-            console.log(parseFloat($(".change-withdrawal h4 em").text()));
-        } else {
-            $(".change-withdrawal .mask").show();
-        }
-    });
+    // $(".change-withdrawal h4 span").click(function() {
+    //     var money = $(".change-withdrawal h4 em").text();
+    //     $("#money").val(money);
+    // });
+    // $(".change-withdrawal h5").on("click", function() {
+    //     var val = $("#money").val();
+    //     var reg = /^\d+(?:\.\d{2})?$/;
+    //     if(val == "" || !reg.test(val) || val == 0) {
+    //         $(".change-withdrawal .mask1").fadeIn(1000, function() {
+    //             $(".change-withdrawal .mask1").fadeOut(1000);
+    //         });
+    //     } else if(parseFloat(val) > parseFloat($(".change-withdrawal h4 em").text())) {
+    //         $(".change-withdrawal .mask2").fadeIn(1000, function() {
+    //             $(".change-withdrawal .mask2").fadeOut(1000);
+    //         });
+    //         console.log(parseFloat(val));
+    //         console.log(parseFloat($(".change-withdrawal h4 em").text()));
+    //     } else {
+    //         $(".change-withdrawal .mask").show();
+    //     }
+    // });
 
     // 商品结算界面
     $(".goods-settlement .nav-bottom em").on("click", function() {
@@ -443,8 +446,8 @@ $(document).ready(function(){
         });
     });
 
-
-
+    
+    
     // if($(".content").length == 1) {
     //     var numOf = parseInt($(".goods-settlement .info .num-of span").text());
     //     $(".goods-settlement .goods-num .num").val(numOf);
@@ -534,7 +537,7 @@ $(document).ready(function(){
             }, 1000);
         }
     });
-
+    
     // 我的奖品
     $(".my-prize .prize-title li").click(function() {
         $(this).addClass('on1').siblings().removeClass('on1');

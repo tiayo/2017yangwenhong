@@ -85,6 +85,33 @@ class UserRepository
             ->get();
     }
 
+    public function getStore($group)
+    {
+        if ($group == 'discover') {
+            return $this->user
+                ->where('type', 2)
+                ->limit(20)
+                ->inRandomOrder()
+                ->get();
+        }
+
+        return $this->user
+            ->where('type', 2)
+            ->where(function ($query) use ($group) {
+                $query->where('group', 0)
+                    ->orwhere('group', $group);
+            })
+            ->get();
+    }
+
+    public function getSearchStore($keyword)
+    {
+        return $this->user
+            ->where('type', 2)
+            ->where('name', 'like', "%$keyword%")
+            ->get();
+    }
+
     public function update($id, $data)
     {
         return $this->user

@@ -5,9 +5,13 @@
 @section('body')
     <div class="index clearfix">
         <div class="search">
-            <a href="{{ route('home.category_list') }}" class="fenlei"></a>
-            <a href="{{ route('home.search') }}" class="search-input"><input type="text" placeholder="搜索礼品"/></a>
-            <a href="{{ route('home.car') }}" class="shopping-cartt"><em>{{ $car_count }}</em></a>
+            <a href="{{ route('home.search') }}" class="search-input"><input type="text" placeholder="搜索美食"/></a>
+        </div>
+        <div class="nav-top clearfix">
+            <a href="{{ route('home.business_list', ['id' => 1]) }}">早餐</a>
+            <a href="{{ route('home.business_list', ['id' => 2]) }}">午餐</a>
+            <a href="{{ route('home.business_list', ['id' => 3]) }}">晚餐</a>
+            <a href="{{ route('home.business_list', ['id' => 4]) }}">宵夜</a>
         </div>
         <div class="swiper-container index-bigpic clearfix">
             <div class="swiper-wrapper">
@@ -23,12 +27,6 @@
             </div>
             <!-- 分页器 -->
             <div class="swiper-pagination"></div>
-        </div>
-        <div class="nav-top clearfix">
-            <a href="{{ route('home.category_group', ['id' => 1]) }}">精选产品</a>
-            <a href="{{ route('home.category_group', ['id' => 2]) }}">超值专区</a>
-            <a href="{{ route('home.category_group', ['id' => 3]) }}">大牌专区</a>
-            <a href="{{ route('home.category_group', ['id' => 4]) }}">折扣专区</a>
         </div>
         <div class="goods">
             <b class="hot-exchange clearfix" style="width: 100%;padding-left: 1em;">今日推荐</b>
@@ -51,10 +49,15 @@
         </div>
         <div class="copyright">
             <h1>© {{ config('site.title') }} 版权所有</h1>
-            <h2>李艺芳提供技术支持</h2>
+            <h2>杨文宏提供技术支持</h2>
         </div>
-        <div class="nav clearfix">
-            @include('home.layouts.sidebar')
+        <div class="quick-nav">
+            <em>快速导航</em>
+        </div>
+        <div class="quick-nav-mask">
+            <div class="quick-con">
+                @include('home.layouts.quick')
+            </div>
         </div>
     </div>
     <em class="return-top">顶部</em>

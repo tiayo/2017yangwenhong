@@ -88,6 +88,20 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="group" class="col-sm-2 col-sm-2 control-label">分组</label>
+                        <div class="col-sm-3">
+                            <select class="form-control m-bot15" id="group" name="group" required>
+                                @if(isset($old_input['group']))
+                                    <option value="{{ $old_input['group'] }}">{{ config('site.user_group')[$old_input['group']] }}</option>
+                                @endif
+
+                                @foreach(config('site.user_group') as $key => $user_type)
+                                    <option value="{{ $key }}">{{ $user_type }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <div  class="col-sm-2 col-sm-2 control-label">
                             <button class="btn btn-success" type="submit"><i class="fa fa-cloud-upload"></i> 确认提交</button>
                         </div>

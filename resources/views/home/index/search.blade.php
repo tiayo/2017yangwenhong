@@ -145,12 +145,12 @@
 <div class="search">
     <div class="header">
         <a href="javascript:history.back(-1)" class="cancel"></a>
-        <form action="{{ route('home.search') }}" class="search-form">
+        <form id="search_form" class="search-form">
             <div class="search-input">
-                <input type="text" name="keyword" placeholder="搜索商品"/>
+                <input type="text" id="search" placeholder="搜索商家"/>
             </div>
         </form>
-        <a href="###" class="search-button"></a>
+        <a href="#" class="search-button"></a>
     </div>
     <div class="recent-search">
         <h1>最近热索<em></em></h1>
@@ -160,8 +160,8 @@
                     <a href="{{ route('home.search', ['keyword' => $keyword]) }}">{{ $keyword }}</a>
                 @endforeach
             @endif
-            <a href="{{ route('home.search', ['keyword' => '红木家具']) }}">红木家具</a>
-            <a href="{{ route('home.search', ['keyword' => '移动空调']) }}">移动空调</a>
+            <a href="{{ route('home.business_search', ['keyword' => '早餐']) }}">早餐</a>
+            <a href="{{ route('home.business_search', ['keyword' => '晚餐']) }}">晚餐</a>
         </h2>
     </div>
     <div class="mask">
@@ -181,5 +181,35 @@
             $(".search .recent-search h2 a").remove();
         });
     });
+</script>
+{{--转换搜索链接--}}
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#search_form').submit(function () {
+
+            var keyword = $('#search').val();
+
+            if (stripscript(keyword) == '') {
+                $('#search').val('');
+                return false;
+            }
+
+            window.location = '{{ route('home.business_search', ['keyword' => '']) }}/' + stripscript(keyword);
+
+            return false;
+        });
+
+    });
+
+    function stripscript(s)
+    {
+        var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]");
+        var rs = "";
+        for (var i = 0; i < s.length; i++) {
+            rs = rs+s.substr(i, 1).replace(pattern, '');
+        }
+        return rs;
+    }
 </script>
 @endsection

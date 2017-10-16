@@ -15,9 +15,15 @@ $this->group(['namespace' => 'Home'], function () {
     $this->get('/', 'IndexController@index')->name('home.index');
     $this->get('/search', 'IndexController@search')->name('home.search');
     $this->get('/commodity/{id}', 'DetailController@view')->name('home.commodity_view');
-    $this->get('/category', 'ListController@categoryList')->name('home.category_list');
     $this->get('/category/{id}', 'ListController@view')->name('home.category_view');
     $this->get('/category/group/{id}', 'ListController@group')->name('home.category_group');
+
+    //店铺列表相关
+    $this->get('/business/list/{group}', 'ListController@storeList')->name('home.business_list');
+    $this->get('/business/list/search/{keyword}', 'ListController@storeSearchList')->name('home.business_search');
+
+    //店铺详情页
+    $this->get('/business/{business_id}', 'BusinessController@view')->name('home.business');
 
     //登录后操作
     $this->group(['middleware' => 'user_auth'], function () {
@@ -27,8 +33,8 @@ $this->group(['namespace' => 'Home'], function () {
         $this->post('/car/update', 'CarController@update')->name('home.car_update');
 
         //添加订单
-        $this->get('/order/add', 'OrderController@addView')->name('home.order_add');
-        $this->get('/order/addPost', 'OrderController@addPost')->name('home.order_add_post');
+        $this->post('/order/add/{business_id}', 'OrderController@addView')->name('home.order_add');
+        $this->post('/order/addPost/{business_id}', 'OrderController@addPost')->name('home.order_add_post');
 
         //修改收货信息
         $this->get('/address', 'OrderController@addressView')->name('home.address');

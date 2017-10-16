@@ -22,15 +22,32 @@ class ListController extends Controller
     }
 
     /**
-     * 所欲分类目录
+     * 店铺列表
      *
+     * @param $group
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function categoryList()
+    public function storeList($group)
     {
+        $stores = $this->index->getStrores($group);
 
-        return view('home.list.category', [
-            'parents' => $this->category->getParent()
+        return view('home.list.store', [
+            'lists' => $stores
+        ]);
+    }
+
+    /**
+     * 店铺列表
+     *
+     * @param $group
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function storeSearchList($keyword)
+    {
+        $stores = $this->index->getStrores($keyword, 'search');
+
+        return view('home.list.store', [
+            'lists' => $stores
         ]);
     }
 

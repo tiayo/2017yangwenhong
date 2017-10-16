@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\Car;
 use App\Http\Controllers\Controller;
 use App\Services\Home\CarService;
+use App\Services\Home\IndexService;
 use App\Services\Home\OrderService;
 use App\User;
 use Illuminate\Http\Request;
@@ -12,13 +13,17 @@ use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
-    protected $order, $request, $car;
+    protected $order, $request, $car, $index;
 
-    public function __construct(OrderService $order, Request $request, CarService $car)
+    public function __construct(OrderService $order,
+                                Request $request,
+                                CarService $car,
+                                IndexService $index)
     {
         $this->order = $order;
         $this->request = $request;
         $this->car = $car;
+        $this->index = $index;
     }
 
     public function view($order_id)
@@ -34,25 +39,40 @@ class OrderController extends Controller
         ]);
     }
 
-    public function addView()
+    public function addView($business_id)
     {
-        $cars = $this->car->getAvalible();
+        $this->validate($this->request, [
+            'commodity.*' => 'required'
+        ]);
 
-        $user = Auth::user();
+        //获取商品
+        foreach ($this->request->get('commodity') as $commodity) {
+            $commodities[] = $this->order->getComodity($commodity);
+        }
 
-        $total_price = $this->car->total_price($cars);
+        //获取订单总价
+        $total_price = $this->order->totalPrice($commodities);
 
         return view('home.order.add', [
-            'cars' => $cars,
-            'user' => $user,
+            'user' => Auth::user(),
+            'bussiness' => $this->index->getBusinessFirst($business_id),
+            'commodities' => $commodities,
             'total_price' => $total_price,
+            'origin_data' => $this->request->get('commodity')
         ]);
     }
 
-    public function addPost()
+    public function addPost($business_id)
     {
+        $this->validate($this->request, [
+            'name' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+            'commodity' => 'required',
+        ]);
+
         try{
-            $this->order->add();
+            $this->order->add($this->request->all(), $business_id);
         } catch (\Exception $exception) {
             return response($exception->getMessage());
         }

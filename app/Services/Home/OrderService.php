@@ -23,19 +23,20 @@ class OrderService
         $this->commodity = $commodity;
     }
 
-    public function add()
+    public function add($post, $business_id)
     {
-        throw_if(empty(Auth::user()['address']) || empty(Auth::user()['phone']), Exception::class, '您没有地址和电话！');
-
-        //获取当前用户购物车所有商品
-        $cars = $this->car->get();
+        //获取商品
+        foreach (unserialize($post['commodity']) as $commodity) {
+            $commodities[] = $this->getComodity($commodity);
+        }
 
         //构造订单
         $order['user_id'] = Auth::id();
-        $order['name'] = Auth::user()['name'];
-        $order['address'] = Auth::user()['address'];
-        $order['phone'] = Auth::user()['phone'];
-        $order['price'] = $this->car->total_price($cars);
+        $order['business_id'] = $business_id;
+        $order['name'] = $post['name'];
+        $order['address'] = $post['address'];
+        $order['phone'] = $post['phone'];
+        $order['price'] = $this->totalPrice($commodities);
         $order['type'] = 1;
         $order['status'] = 1; //测试：默认为已付款
 
@@ -43,24 +44,21 @@ class OrderService
         $id = $this->order->create($order)->id;
 
         //创建订单详情以及减少库存
-        foreach ($cars as $car) {
+        foreach ($commodities as $commodity) {
             //减少库存操作
-            $this->commodity->decrement($car['num']);
+            $this->commodity->decrement($commodity['num']);
 
             //订单详情数据
             $order_detail['order_id'] = $id;
-            $order_detail['user_id'] = $car['user_id'];
-            $order_detail['commodity_id'] = $car['commodity_id'];
-            $order_detail['num'] = $car['num'];
-            $order_detail['price'] = $car['price'];
-            $order_detail['remark'] = $car['remark'];
-            $order_detail['status'] = $car['status'];
+            $order_detail['user_id'] = Auth::id();
+            $order_detail['commodity_id'] = $commodity['id'];
+            $order_detail['num'] = $commodity['num'];
+            $order_detail['price'] = $commodity['price'];
+            $order_detail['remark'] = $commodity['remark'] ?? '无';
+            $order_detail['status'] = $commodity['status'];
 
             //写入订单详情数据库
             $this->orderDetail->create($order_detail);
-
-            //删除购物车
-            $this->car->destroy($car['id']);
         }
 
         return true;
@@ -109,5 +107,46 @@ class OrderService
     public function first($id)
     {
         return $this->validata($id);
+    }
+
+    /**
+     * 获取单条商品
+     *
+     * @param $id
+     */
+    public function getComodity($key)
+    {
+        //切割获取商品id和数量
+        $exploede = explode('_', $key);
+
+        //判断数据合法性
+        throw_if(!isset($exploede[0]) || !isset($exploede[1]), Exception::class, '数据格式异常！', 403);
+
+        //获取商品信息
+        $commodity = $this->commodity->first($exploede[0]);
+
+        throw_if(!isset($exploede[0]) || !isset($exploede[1]), Exception::class, '数据格式异常！', 403);
+
+        //获取购买数量
+        $commodity['num'] = $exploede[1];
+
+        return $commodity;
+    }
+
+    /**
+     * 根据商品获取价格
+     *
+     * @param $commodities
+     * @return int
+     */
+    public function totalPrice($commodities)
+    {
+        $total_price = 0;
+
+        foreach ($commodities as $commodity) {
+            $total_price += $commodity['price'] * $commodity['num'];
+        }
+
+        return $total_price;
     }
 }

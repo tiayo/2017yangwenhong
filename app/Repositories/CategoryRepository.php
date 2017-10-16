@@ -70,6 +70,20 @@ class CategoryRepository
     }
 
     /**
+     * 获取指定商户的分类
+     *
+     * @param $business_id
+     * @return mixed
+     */
+    public function getSimpleBusinessIndex($business_id)
+    {
+        return $this->category
+            ->where('parent_id', $business_id)
+            ->orderBy('id', 'desc')
+            ->get();
+    }
+
+    /**
      * 获取所有显示记录(不带分页)
      *
      * @param array ...$select

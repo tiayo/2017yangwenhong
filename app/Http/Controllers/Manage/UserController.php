@@ -80,6 +80,7 @@ class UserController extends Controller
             'avatar' => 'file|image',
             'password' => 'min:6',
             'type' => 'required|integer',
+            'group' => 'required|integer',
         ]);
 
         //添加时补充验证
