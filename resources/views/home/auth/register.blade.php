@@ -4,11 +4,21 @@
 
 @section('style')
     <style type="text/css">
+        .registration #logo {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
         .registration #logo img {
-            width: 50%;
-            margin: 5% 25% 0 25%;
+            float: left;
+            width: 100%;
+            height: 100%;
         }
         .registration .title {
+            position: fixed;
+            top: 50px;
             width: 100%;
             height: 95px;
             color: #000;
@@ -17,20 +27,28 @@
             text-indent: 10px;
             text-align: center;
             line-height: 95px;
+            z-index: 999;
         }
         .registration #registration-dialog {
+            position: fixed;
+            bottom: 95px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
             width: 74%;
             margin: 0 auto 20px;
-            background-color: #fff;
+            z-index: 999;
         }
         .registration #user {
             height: 46px;
             margin-bottom: 20px;
             border: 1px solid #ddd;
+            background-color: rgba(255, 255, 255, 0.5);
         }
         .registration #password {
             height: 46px;
             border: 1px solid #ddd;
+            background-color: rgba(255, 255, 255, 0.5);
         }
         .registration #user input,
         .registration #password input {
@@ -41,17 +59,21 @@
             line-height: 25px;
             outline: none;
             border: 0;
+            background-color: rgba(255, 255, 255, 0);
         }
         .registration #user input::-webkit-input-placeholder,
         .registration #password input::-webkit-input-placeholder {
             color: #999;
         }
         .registration #registration-button {
-            float: left;
+            position: fixed;
+            bottom: 50px;
+            left: 0;
+            right: 0;
             width: 74%;
             height: 45px;
-            margin: 0 13% 10px;
-            background-color: #ffda44;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.5);
             color: #fff;
             font-size: 16px;
             letter-spacing: 10px;
@@ -65,6 +87,9 @@
 
 @section('body')
 <div class="registration">
+    <div id="logo">
+        <img src="{{ asset('/style/home/picture/login.jpg') }}"/>
+    </div>
     <div class="title">
         用户注册
     </div>
