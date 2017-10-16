@@ -33,7 +33,7 @@
             <ul class="goods-con clearfix">
                 @foreach($recommend_today as $commodity)
                     <li>
-                        <a href="{{ route('home.commodity_view', ['id' => $commodity['id']]) }}">
+                        <a href="{{ route('home.business', ['id' => $commodity['user_id']]) }}">
                             <h3>
                                 <img src="{{ $commodity['image'] }}" height="750" width="750"/>
                             </h3>

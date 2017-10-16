@@ -66,16 +66,6 @@
             height: 100%;
             border-radius: 50%;
         }
-        /*.user-info li:nth-child(3) {
-            border-bottom: 0;
-        }*/
-        /*.user-info li:nth-child(4) {
-            height: 10px;
-            padding: 0;
-            margin: 0;
-            background-color: #f3f5f9;
-            border-bottom: 0;
-        }*/
         .user-info li:nth-last-child(1) {
             border-bottom: 0;
             height: 100px;
@@ -96,12 +86,12 @@
             height: 74px;
             padding: 13px 0;
         }
-        button {
+        .save {
             display: block;
             width: 50%;
             height: 40px;
             margin: 20px auto 0px;
-            background-color: #ffda44;
+            background-color: #b0c4c3;
             border-radius: 40px;
             color: #333;
             font-size: 16px;
@@ -109,6 +99,22 @@
             text-align: center;
             line-height: 40px;
             border: 0;
+        }
+        .Pullout {
+            display: block;
+            width: 50%;
+            height: 40px;
+            margin: 20px auto 0px;
+            background-color: #f5f5f5;
+            border-radius: 40px;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 40px;
+            border: 0;
+            box-shadow: 1px 1px 2px #b0c4c3,
+            -1px -1px 2px #b0c4c3;
         }
     </style>
 @endsection
@@ -134,7 +140,7 @@
                 <textarea name="address" id="user-city" cols="30" rows="10" placeholder="请输入您的详细地址">{{ $user['address'] }}</textarea>
             </li>
         </ul>
-        <button type="submit">保存</button>
+        <button type="submit" class="save">保存</button>
     </form>
-    <button type="button" onclick="location='{{ route('home.logout') }}'">退出登录</button>
+    <button type="button" onclick="location='{{ route('home.logout') }}'" class="Pullout">退出登录</button>
 @endsection

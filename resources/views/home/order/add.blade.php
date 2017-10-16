@@ -16,7 +16,7 @@
             </h1>
         </div>
         <div class="content">
-            <a href="goods-details.html" class="info">
+            <a href="{{ route('home.business', ['business_id' => $bussiness['id']]) }}" class="info">
                 <h1 class="name">{{ $bussiness['name'] }}</h1>
                 <ul>
                     @foreach($commodities as $commodity)

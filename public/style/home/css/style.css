@@ -235,7 +235,7 @@ body {
     top: 0;
     width: 100%;
     height: 45px;
-    background-color: #ffda44;
+    background-color: #b0c4c3;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
     z-index: 999;
 }
@@ -523,7 +523,7 @@ body {
     width: 90%;
     height: 44px;
     padding: 0 5%;
-    background: #ffda44;
+    background: #b0c4c3;
     z-index: 999;
 }
 .classification .header .search {
@@ -561,7 +561,7 @@ body {
 }
 .classification .tab .on {
     background-color: #fff;
-    border-left: 3px solid #ffda44;
+    border-left: 3px solid #b0c4c3;
 }
 .classification .tabcon {
     position: absolute;
@@ -600,7 +600,7 @@ body {
     height: 17px;
     padding-left: 2%;
     margin-top: 10px;
-    border-left: 3px solid #ffda44;
+    border-left: 3px solid #b0c4c3;
     color: #666;
     font-size: 16px;
     text-align: left;
@@ -894,7 +894,7 @@ body {
     height: 45px;
     margin: 5% 25% 0;
     box-shadow: 0px 3px rgba(92, 59, 9, 0.2);
-    background-color: #ffda44;
+    background-color: #b0c4c3;
     border-radius: 20px;
     color: #333;
     font-size: 18px;
@@ -957,7 +957,7 @@ body {
     float: left;
     width: 25%;
     height: 50px;
-    background-color: #ffda44;
+    background-color: #b0c4c3;
 }
 .shopping-cart .total-price .settlement a {
     float: left;
@@ -1005,7 +1005,7 @@ body {
     width: 100%;
     height: 150px;
     margin-bottom: 10px;
-    background: #999;
+    background: #b0c4c3;
     color: #fff;
 }
 .pc .portrait {
@@ -1399,7 +1399,7 @@ body {
     width: 90%;
     height: 45px;
     padding: 0 5%;
-    background: #ffda44;
+    background: #b0c4c3;
 }
 .classification-list .header .search .search-input {
     float: left;
@@ -1451,90 +1451,6 @@ body {
     background: url(../icon/grzx.png) no-repeat 50% 5px;
     background-size: 25px;
 }
-/*.classification-list .header .screening {
-    width: 100%;
-    height: 40px;
-    border-bottom: 1px solid #e7e7e7;
-}
-.classification-list .header .screening li {
-    float: left;
-    width: 33.3%;
-    height: 100%;
-    background-color: #fff;
-    color: #666;
-    text-align: center;
-    line-height: 40px;
-}
-.classification-list .header .screening .on {
-    color: red;
-}
-.classification-list .header .screening-list li .on {
-    color: red;
-}
-.classification-list .header .screening-list {
-    width: 100%;
-}
-.classification-list .header .screening-list li {
-    display: none;
-    width: 100%;
-    height: 80px;
-    border-bottom: 1px solid #e7e7e7;
-}
-.classification-list .header .screening-list li:nth-child(1) {
-    width: 100%;
-    height: 120px;
-}
-.classification-list .header .screening-list li span {
-    float: left;
-    width: 95%;
-    height: 40px;
-    padding-left: 5%;
-    background-color: #fff;
-    color: #666;
-    font-size: 15px;
-    text-align: left;
-    line-height: 40px;
-}
-.classification-list .header .screening .Price,
-.classification-list .header .screening .Sales {
-    position: relative;
-}
-.classification-list .header .screening .Sales .T {
-    position: absolute;
-    top: 13px;
-    right: 28%;
-    width: 10%;
-    height: 20%;
-    background: url(../icon/caret-up1.png) no-repeat center;
-    background-size: 13px;
-}
-.classification-list .header .screening .Sales .B {
-    position: absolute;
-    top: 19px;
-    right: 28%;
-    width: 10%;
-    height: 20%;
-    background: url(../icon/caret-down1.png) no-repeat center;
-    background-size: 13px;
-}
-.classification-list .header .screening .Price .T {
-    position: absolute;
-    top: 13px;
-    right: 28%;
-    width: 10%;
-    height: 20%;
-    background: url(../icon/caret-up1.png) no-repeat center;
-    background-size: 13px;
-}
-.classification-list .header .screening .Price .B {
-    position: absolute;
-    top: 19px;
-    right: 28%;
-    width: 10%;
-    height: 20%;
-    background: url(../icon/caret-down1.png) no-repeat center;
-    background-size: 13px;
-}*/
 .classification-list .content {
     position: fixed;
     overflow: scroll;
@@ -1806,7 +1722,7 @@ body {
     float: left;
     width: 29.99%;
     height: 50px;
-    background-color: #ffda44;
+    background-color: #b0c4c3;
     color: #333;
     font-size: 16px;
     font-weight: bold;
@@ -1996,7 +1912,7 @@ body {
     float: left;
     width: 100%;
     height: 50px;
-    background-color: #ffda44;
+    background-color: #b0c4c3;
     color: #333;
     font-size: 16px;
     font-weight: bold;
@@ -2130,7 +2046,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 45px;
-    background-color: #ffda44;
+    background-color: #b0c4c3;
     color: #333;
     font-size: 16px;
     font-weight: bold;
@@ -2394,7 +2310,7 @@ body {
     width: 50%;
     height: 40px;
     margin: 20px auto 0px;
-    background-color: #ffda44;
+    background-color: #b0c4c3;
     border-radius: 40px;
     color: #333;
     font-size: 16px;
@@ -2451,7 +2367,7 @@ body {
     float: left;
     width: 100%;
     margin-bottom: 10px;
-    color: #ffda44;
+    color: #b0c4c3;
     font-size: 40px;
     font-weight: bold;
     text-align: center;
@@ -2467,7 +2383,7 @@ body {
     float: left;
     width: 28%;
     margin: 18px 0 0 36%;
-    background-color: #ffda44;
+    background-color: #b0c4c3;
     border-radius: 15px;
     font-size: 16px;
     font-weight: bold;
@@ -2500,7 +2416,7 @@ body {
     float: left;
     width: 99.38%;
     height: 25px;
-    color: #ffda44;
+    color: #b0c4c3;
     font-size: 20px;
     line-height: 25px;
 }
@@ -2509,7 +2425,7 @@ body {
     width: 0px;
     height: 30px;
     margin-top: 10px;
-    border-right: 1px solid #ffda44;
+    border-right: 1px solid #b0c4c3;
 }
 .my-balance .balance-info ul .today-consumption {
     right: 0;
@@ -2525,7 +2441,7 @@ body {
     float: left;
     width: 100%;
     height: 25px;
-    color: #ffda44;
+    color: #b0c4c3;
     font-size: 20px;
     line-height: 25px;
 }
@@ -2629,7 +2545,7 @@ body {
     width: 50%;
     height: 40px;
     margin: 20px auto 15px;
-    background-color: #ffda44;
+    background-color: #b0c4c3;
     border-radius: 40px;
     color: #333;
     font-size: 16px;
@@ -2894,54 +2810,43 @@ body {
     position: relative;
     float: left;
     width: 100%;
-    padding-bottom: 15px;
     margin-bottom: 10px;
-    background: #ffda44;
+    background: #fff;
 }
 .goods-settlement .address h1 {
     float: left;
-    overflow: hidden;
-    white-space: nowrap;
-    -ms-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    width: 80%;
-    padding-left: 10%;
+    width: 100%;
     margin-top: 10px;
-    font-size: 16px;
     text-align: left;
     line-height: 25px;
 }
 .goods-settlement .address h1 .name-input {
     float: left;
-    width: 100%;
-    height: 25px;
-    background-color: #ffda44;
-    line-height: 25px;
+    width: 40%;
+    height: 30px;
+    margin-left: 20px;
     outline: none;
-    border: 0;
+    margin-bottom: 5px;
+    line-height: 30px;
 }
 .goods-settlement .address h1 .tel-input {
     float: left;
-    width: 100%;
-    height: 25px;
-    background-color: #ffda44;
-    line-height: 25px;
+    width: 40%;
+    height: 30px;
+    margin-left: 20px;
     outline: none;
-    border: 0;
+    margin-bottom: 5px;
+    line-height: 30px;
 }
 .goods-settlement .address .address-input {
     float: left;
-    width: 80%;
-    padding-left: 10%;
+    width: 90%;
+    height: 30px;
     margin-left: 20px;
-    background: url(../icon/address2.png) no-repeat 4% 50%;
-    background-size: 20px;
     color: #666;
     outline: none;
-    border: 0;
-    font-size: 14px;
     text-align: left;
-    line-height: 25px;
+    line-height: 30px;
 }
 .goods-settlement .content {
     float: left;
@@ -3035,7 +2940,7 @@ body {
     float: right;
     width: 30%;
     height: 45px;
-    background-color: #ffda44;
+    background-color: #b0c4c3;
     color: #333;
     font-size: 15px;
     font-weight: bold;
@@ -3079,7 +2984,7 @@ body {
     margin: 0 auto;
     width: 260px;
     height: 50px;
-    background-color: #ffda44;
+    background-color: #b0c4c3;
     border-radius: 45px;
     box-shadow: 0px 3px rgba(92, 59, 9, 0.2);
     color: #333;
@@ -3201,7 +3106,7 @@ body {
     float: left;
     width: 100%;
     margin-bottom: 10px;
-    color: #ffda44;
+    color: #b0c4c3;
     font-size: 40px;
     font-weight: bold;
     text-align: center;
@@ -3239,7 +3144,7 @@ body {
     float: left;
     width: 99.38%;
     height: 25px;
-    color: #ffda44;
+    color: #b0c4c3;
     font-size: 20px;
     line-height: 25px;
 }
@@ -3248,7 +3153,7 @@ body {
     width: 0px;
     height: 30px;
     margin-top: 10px;
-    border-right: 1px solid #ffda44;
+    border-right: 1px solid #b0c4c3;
 }
 .integral .integral-info ul .today-consumption {
     right: 0;
@@ -3264,7 +3169,7 @@ body {
     float: left;
     width: 100%;
     height: 25px;
-    color: #ffda44;
+    color: #b0c4c3;
     font-size: 20px;
     line-height: 25px;
 }
@@ -4179,7 +4084,7 @@ body {
     height: 45px;
     margin: 5% 25% 0;
     box-shadow: 0px 3px rgba(92, 59, 9, 0.2);
-    background-color: #ffda44;
+    background-color: #b0c4c3;
     border-radius: 20px;
     color: #333;
     font-size: 18px;
@@ -4310,7 +4215,7 @@ body {
     line-height: 30px;
 }
 .my-prize .prize-details li .prize-list .on2 {
-    background-color: #ffda44;
+    background-color: #b0c4c3;
     color: #333;
     box-shadow: 0px 3px rgba(92, 59, 9, 0.2);
 }
@@ -4417,7 +4322,7 @@ body {
     top: 0;
     width: 100%;
     height: 150px;
-    background: #ffda44;
+    background: #b0c4c3;
     z-index: 999;
 }
 .store .header .store-logo {
@@ -4462,7 +4367,7 @@ body {
 }
 .store .tab .on {
     background-color: #fff;
-    border-left: 3px solid #ffda44;
+    border-left: 3px solid #b0c4c3;
 }
 .store .tabcon {
     position: absolute;
@@ -4569,7 +4474,7 @@ body {
     height: 100%;
     color: #fff;
     border: 0;
-    background-color: #ffda44;
+    background-color: #b0c4c3;
     outline: none;
     font-weight: bold;
     font-size: 16px;

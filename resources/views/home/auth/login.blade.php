@@ -1,4 +1,4 @@
-@extends('home.layouts.app')
+﻿@extends('home.layouts.app')
 
 @section('title', '登录')
 
@@ -92,26 +92,26 @@
 @endsection
 
 @section('body')
-<div class="login">
-    <div class="title">
-        欢迎登录
-    </div>
-    <form action="{{ route('home.login') }}" method="post">
-        {{ csrf_field() }}
-        <div id="login-dialog">
-            <div id="user">
-                <input type="email" name="email" placeholder="请输入登录邮箱"/>
-            </div>
-            <div id="password">
-                <input type="password" name="password" placeholder="请输入密码"/>
-            </div>
-
-            @foreach($errors as $error)
-                <div class="error">{{ $error }}</div>
-            @endforeach
+    <div class="login">
+        <div class="title">
+            欢迎登录
         </div>
-        <button type="submit" id="login-button">登录</button>
-    </form>
-    <button id="registration-button" onclick="location='{{ route('home.register') }}'">注册</button>
-</div>
+        <form action="{{ route('home.login') }}" method="post">
+            {{ csrf_field() }}
+            <div id="login-dialog">
+                <div id="user">
+                    <input type="email" name="email" placeholder="请输入登录邮箱"/>
+                </div>
+                <div id="password">
+                    <input type="password" name="password" placeholder="请输入密码"/>
+                </div>
+
+                @foreach($errors as $error)
+                    <div class="error">{{ $error }}</div>
+                @endforeach
+            </div>
+            <button type="submit" id="login-button">登录</button>
+        </form>
+        <button id="registration-button" onclick="location='{{ route('home.register') }}'">注册</button>
+    </div>
 @endsection

@@ -20,7 +20,7 @@ $(document).ready(function(){
             $(this).animate({"right" : 165}, 1000);
             $(".quick-nav-mask .quick-con").animate({"right" : 0}, 1000);
             $(this).css({
-                "background" : "rgba(0, 0, 0, 0.7) url(../icon/more2.png) no-repeat 2px center",
+                "background" : "rgba(0, 0, 0, 0.7) url(/style/home/icon/more2.png) no-repeat 2px center",
                 "background-size" : "15px"
             });
             $(".quick-nav em").html("收起");
