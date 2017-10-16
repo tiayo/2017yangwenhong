@@ -10,11 +10,8 @@
             bottom: 0;
             left: 0;
             right: 0;
-        }
-        .login #logo img {
-            float: left;
-            width: 100%;
-            height: 100%;
+            background: url('{{ asset('/style/home/picture/login.jpg') }}') no-repeat center;
+            background-size: 100% 100%;
         }
         .login .title {
             position: fixed;
@@ -105,9 +102,7 @@
 
 @section('body')
 <div class="login">
-    <div id="logo">
-        <img src="{{ asset('/style/home/picture/login.jpg') }}"/>
-    </div>
+    <div id="logo"></div>
     <div class="title">
         欢迎登录
     </div>
