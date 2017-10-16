@@ -37,7 +37,7 @@
             z-index: 999;
         }
         .registration #user {
-            height: 46px;
+            height: 35px;
             margin-bottom: 20px;
             border: 1px solid #ddd;
             background-color: rgba(255, 255, 255, 0.5);
@@ -51,9 +51,9 @@
         .registration #password input {
             float: right;
             width: 95%;
-            height: 26px;
+            height: 21px;
             margin-top: 10px;
-            line-height: 25px;
+            line-height: 21px;
             outline: none;
             border: 0;
             background-color: rgba(255, 255, 255, 0);
