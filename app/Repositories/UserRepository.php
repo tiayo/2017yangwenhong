@@ -57,12 +57,6 @@ class UserRepository
 
     public function destroy($id)
     {
-        //删除关联
-        $this->user
-            ->find($id)
-            ->profile()
-            ->delete();
-
         //删除user表
         return $this->user
             ->where('id', $id)
