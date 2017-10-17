@@ -66,7 +66,7 @@
                     <div class="form-group">
                         <label for="image" class="col-sm-2 col-sm-2 control-label">封面图片</label>
                         <div class="col-sm-3">
-                            <input type="file" id="image" name="image" value="{{ $old_input['image'] }}">
+                            <input type="file" id="image" name="image" value="{{ $old_input['image'] or '' }}">
                         </div>
                     </div>
                     <div class="form-group">
