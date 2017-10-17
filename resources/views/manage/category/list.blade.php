@@ -43,7 +43,7 @@
                         <tr>
                             <td>{{ $list['id'] }}</td>
                             <td>{{ $list['name'] }}</td>
-                            <td>{{ $list->user->name }}</td>
+                            <td>{{ $list->user->name ?? '未找到' }}</td>
                             <td>{{ $list['created_at'] }}</td>
                             <td>
                                 <button class="btn btn-info" type="button" onclick="location='{{ route('category_update', ['id' => $list['id'] ]) }}'">编辑</button>

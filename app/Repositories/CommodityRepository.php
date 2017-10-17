@@ -239,4 +239,11 @@ class CommodityRepository
             ->where($where)
             ->get();
     }
+
+    public function selectCount($where)
+    {
+        return $this->commodity
+            ->where($where)
+            ->count();
+    }
 }

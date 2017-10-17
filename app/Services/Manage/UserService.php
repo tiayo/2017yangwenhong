@@ -2,6 +2,7 @@
 
 namespace App\Services\Manage;
 
+use App\Repositories\CommodityRepository;
 use App\Repositories\UserRepository;
 use App\Services\ImageService;
 use Exception;
@@ -10,11 +11,12 @@ class UserService
 {
     use ImageService;
 
-    protected $user;
+    protected $user, $commodity;
 
-    public function __construct(UserRepository $user)
+    public function __construct(UserRepository $user, CommodityRepository $commodity)
     {
         $this->user = $user;
+        $this->commodity = $commodity;
     }
 
     /**
@@ -114,7 +116,14 @@ class UserService
     public function destroy($id)
     {
         //验证是否可以操作当前记录
-        $this->validata($id)->toArray();
+        $user = $this->validata($id)->toArray();
+
+        //验证商户下是否有商品
+        if ($user['type'] == 2) {
+            throw_if($this->commodity->selectCount([
+                ['user_id', $id]
+            ]) > 0, Exception::class, '该商户还有商品，先删除商品。', 403);
+        }
 
         //执行删除user表
         return $this->user->destroy($id);

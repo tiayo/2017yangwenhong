@@ -3,7 +3,9 @@
     <li class="menu-list" id="nav_0"><a href=""><i class="fa fa-folder-open"></i> <span>分类管理</span></a>
         <ul class="sub-menu-list">
             <li id="nav_0_1"><a href=" {{ route('category_list') }} ">分类管理</a></li>
-            <li id="nav_0_2"><a href=" {{ route('category_add') }} ">添加分类</a></li>
+            @if(can('business'))
+                <li id="nav_0_2"><a href=" {{ route('category_add') }} ">添加分类</a></li>
+            @endif
         </ul>
     </li>
 
