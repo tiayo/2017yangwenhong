@@ -62,10 +62,10 @@
                             <tr>
                                 <td>{{ $list['id'] }}</td>
                                 <td>{{ $list->user->name }}</td>
-                                <td>{{ $list->business->name }}</td>
+                                <td>{{ $list->business->name ?? '未找到' }}</td>
                                 <td>
                                     @foreach($list->orderDetail as $list_detail)
-                                        {{ $list_detail->commodity->name }} <br>
+                                        {{ $list_detail->commodity->name ?? '未找到' }} <br>
                                     @endforeach
                                 </td>
                                 <td>{{ $list['address'] }}</td>
