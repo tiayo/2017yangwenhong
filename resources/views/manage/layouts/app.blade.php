@@ -52,34 +52,13 @@
 
         <!-- header section start-->
         <div class="header-section">
-            <!--toggle button start-->
-            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
-            <!--toggle button end-->
-
-            <div class="menu-right">
-                <ul class="notification-menu">
-                    <li>
-
-                    </li>
-                    <li>
-                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            {{ config('site.title') }} - 管理平台
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-        <!-- header section end-->
-
-        <!--body wrapper start-->
-        <div class="wrapper">
             {{--面包屑开始--}}
             <div class="row">
                 <div class="col-md-12">
                     <!--breadcrumbs start -->
-                    <ul class="breadcrumb panel">
-                        <li><a href="{{ route('manage') }}"><i class="fa fa-home"></i>主页</a></li>
+                    <ul class="breadcrumb panel" style="margin-bottom: 0">
+                        位置：
+                        <li><a href="{{ route('manage') }}">主页</a></li>
                         @section('breadcrumb')
 
                         @show
@@ -88,7 +67,11 @@
                 </div>
             </div>
             {{--面包屑结束--}}
+        </div>
+        <!-- header section end-->
 
+        <!--body wrapper start-->
+        <div class="wrapper">
             @section('body')
 
             @show
