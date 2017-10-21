@@ -331,7 +331,7 @@ hr {
 .custom-nav > li.active > a:hover,
 .custom-nav > li.active > a:focus {
     background-color: #353f4f;
-    color: #65cea7;
+    color: #fff;
 }
 
 .custom-nav > li.menu-list.active > a {
@@ -390,7 +390,7 @@ hr {
 }
 
 .custom-nav .sub-menu-list > li.active > a {
-    color: #65CEA7;
+    color: #fff;
     background-color: #2A323F;
 }
 

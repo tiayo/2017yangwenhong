@@ -35,15 +35,12 @@
 
         <!--logo and iconic logo start-->
         <div class="logo text-center">
-            {{--<h2 style="color: #fff;">{{ config('site.title') }}</h2>--}}
-            {{--<a href="/"></a>--}}
-            <img style="width:200px" src="http://www.startce.com/skin/zd/images/logo_2.png" alt="">
-        </div>
-
-        <div class="logo-icon text-center">
-            <a href="/"></a>
+            <img style="width: 30%;float: left;margin-left: 35%; margin-top: 1em" src="{{ Auth::user()['avatar'] }}" alt="">
+            <span style="width: 100%;float: left;text-align: center; margin-top: 1em; color: white">{{ Auth::user()['name'] }}</span>
+            <a style="width: 100%;font-size: 14px;float: left;text-align: center;margin: 0.5em 0 0 0; color: white" href="{{ route('manage.logout') }}">退出登录</a>
         </div>
         <!--logo and iconic logo end-->
+
         <div class="left-side-inner">
             @include('manage.layouts.sidebar')
         </div>
@@ -58,11 +55,7 @@
             <!--toggle button start-->
             <a class="toggle-btn"><i class="fa fa-bars"></i></a>
             <!--toggle button end-->
-            <!--search start-->
-            {{--<form class="searchform" id="searchform_id">--}}
-                {{--<input type="text" class="form-control" name="keyword" value="" placeholder="Search here..." />--}}
-            {{--</form>--}}
-            <!--search end-->
+
             <div class="menu-right">
                 <ul class="notification-menu">
                     <li>
@@ -70,13 +63,8 @@
                     </li>
                     <li>
                         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            当前帐号:
-                            {{ Auth::guard()->user()['name'] }}
-                            <span class="caret"></span>
+                            {{ config('site.title') }} - 管理平台
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-                            <li><a href="{{ route('manage.logout') }}"><i class="fa fa-sign-out"></i>退出登录</a></li>
-                        </ul>
                     </li>
 
                 </ul>
@@ -108,7 +96,7 @@
         <!--body wrapper end-->
 
         <!--footer section start-->
-        <footer style="bottom: 0;position: fixed;">Copyright © 2015 - {{ date('Y') }} {{ config('site.title') }} All Rights Reserved  <strong>v1.0</strong></footer>
+        <footer style="bottom: 0;position: fixed;background: none">{{ config('site.title') }} 版权所有</footer>
         <!--footer section end-->
 
 
