@@ -35,7 +35,7 @@
 
         <!--logo and iconic logo start-->
         <div class="logo text-center">
-            <img style="width: 30%;float: left;margin-left: 35%; margin-top: 1em" src="{{ Auth::user()['avatar'] }}" alt="">
+            <img style="width: 30%;min-height:72px;max-height:72px;float: left;margin-left: 35%; margin-top: 1em" src="{{ Auth::user()['avatar'] }}" alt="">
             <span style="width: 100%;float: left;text-align: center; margin-top: 1em; color: white">{{ Auth::user()['name'] }}</span>
             <a style="width: 100%;font-size: 14px;float: left;text-align: center;margin: 0.5em 0 0 0; color: white" href="{{ route('manage.logout') }}">退出登录</a>
         </div>
