@@ -24,6 +24,9 @@
                 <div class="swiper-slide">
                     <a href="#"><img src="{{ asset('/style/home/picture/bigpic3.jpg') }}"/></a>
                 </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="{{ asset('/style/home/picture/bigpic4.jpg') }}"/></a>
+                </div>
             </div>
             <!-- 分页器 -->
             <div class="swiper-pagination"></div>
